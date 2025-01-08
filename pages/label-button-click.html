@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Button Click</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/label-button-click.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Label Button Click</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        参考 -&gt;&nbsp;&nbsp;<a href="https://zenn.dev/uhyo/articles/label-button-onclick-twice" target="_blank">&lt;label&gt;で&lt;button&gt;を囲んでいるときにclickイベントが2回発火する問題の原因と対策</a>
+        <p>挙動の確認</p>
+        <div class="button">
+            <p>ボタンクリックで, clickイベントが2回発火</p>
+            <label>ボタンクリックでカウント<button id="clickTwice">0</button></label>
+        </div>
+        <p></p>
+        <div class="button">
+            <p>event.preventDefault()で対策</p>
+            <label>ボタンクリックでカウント<button id="prevent">0</button></label>
+        </div>
+        <p></p>
+        <div class="button">
+            <p>pointer-events:noneを指定して対策</p>
+            <label>ボタンクリックでカウント<button id="pointerEventsNone">0</button></label>
+        </div>
+
+    </main>
+</body>
+</html>
