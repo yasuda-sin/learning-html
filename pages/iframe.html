@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<body>
+    <header>
+        <h1>iframeのサンプルです。</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <p>
+        <label for="iframeUrl">iframeのソースを指定して表示します。</label><br>
+        <input type="text" name="iframeUrl" id="iframeUrl" placeholder="https://example.com" style="width: 300px; margin: 10px;">
+    </p>
+    <iframe
+  id="iframeExample"
+  title="Inline Frame Example"
+  width="800"
+  height="500"
+  src="about:blank">
+</iframe>
+</body>
+<script>
+    const iframeUrlInput = document.getElementById('iframeUrl');
+    const iframeExample = document.getElementById('iframeExample');
+
+    iframeUrlInput.addEventListener('change', () => {
+        const url = iframeUrlInput.value;
+        iframeExample.src = url;
+    });
+    </script>
+</html>
